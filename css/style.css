@@ -114,22 +114,31 @@ ul {
 
 /* === About Section === */
 .about {
-    background-color: #ecf0f1;
-    padding: 40px 20px;
-    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about .text-box {
+    max-width: 800px;
+    width: 100%;
+    padding: 32px 36px;
+
+    background-color: rgba(0, 0, 0, 0.6);   /* 推荐背景色 1（主推荐） */
+    border-radius: 16px;
+
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: white;
+
+    /* 轻微阴影，增强“卡片感” */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .heading-large {
     font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.text-box {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-size: 1.1rem;
-    color: #7f8c8d;
+    margin-bottom: 24px;
+    text-align: center;
 }
 
 /* === Footer === */
@@ -221,7 +230,6 @@ table.info th {
   margin: 80px auto 40px;       
   max-width: 500px;
   width: 90%;
-  padding: 24px 32px;
   text-align: center;
   color: white;
   font-size: 1.3rem;
