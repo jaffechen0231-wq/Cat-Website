@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <div class="hero-background"></div>
 
     <!-- 标题栏 -->
-    <header class="page-header">
+    <header id="page-header" class="page-header">
         <h1 class="site-title font-english">Menu</h1>
         <nav>
             <ul class="main-nav font-english">
@@ -51,8 +52,25 @@
             <div class="copyright">
                 <small>&copy; SHENCHEN</small>
             </div>
-      </footer>
+        </footer>
+        <script>
+        // 为 Catpedia 和 Info 添加动画
+        anime({
+            targets: '#page-header',  // 选择 page-header 元素
+            translateY: [-100,0],  // 从上方平移到当前位置
+            opacity: [0, 1],        // 从透明度 0 到 1
+            duration: 1500,         // 动画时长为 1500ms
+            easing: 'easeOutExpo',  // 缓动效果
+        });
 
+        anime({
+            targets: '#info',      // 选择 #info 元素
+            translateY: [100, 0],  // 从下方平移到当前位置
+            opacity: [0, 1],       // 从透明度 0 到 1
+            duration: 1500,        // 动画时长为 1500ms
+            easing: 'easeOutExpo', // 缓动效果
+        });
+    </script>
 
 </body>
 </html>
